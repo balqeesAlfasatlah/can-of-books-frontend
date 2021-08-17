@@ -13,10 +13,10 @@ import Login from './Login';
 import BestBook from './BestBooks';
 =======
 import BestBooks from './BestBooks';
-import { useAuth0, withAuth0 } from "@auth0/auth0-react";
+import {  withAuth0 } from "@auth0/auth0-react";
 import Profile from './Profile';
 import "./"
-import LogoutButton from './LogoutButton';
+
 
 >>>>>>> f660fe05db9a4eaad8329b4226cab3f59d39d125
 
