@@ -4,6 +4,22 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import './BestBooks.css';
 
 class MyFavoriteBooks extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      userData:[],
+    }
+  }
+
+  async componentDidMount(){
+    let response = await axios.get(
+      `http://localhost:4009/books?email=balqeesAlfasatlah@yahoo.com`
+    );
+    this.setState({
+      userData : response.data
+    });
+  }
   render() {
     return(
       <div>
