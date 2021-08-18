@@ -31,13 +31,27 @@ Clone this repo to your own account with the green "Use this template" button. T
 
 ## Credit and Collaborations
 ---
+# lab 11 :
 
 ### Name of feature: Authentication
 
-Estimate of time needed to complete: 3 hours
++ Estimate of time needed to complete: 3 hours
 
-Start time: 2:11 pm
++ Start time: 2:11 pm
 
-Finish time: 4:00 pm
++ Finish time: 4:00 pm
 
-Actual time needed to complete: 2 hours
++ Actual time needed to complete: 2 hours
+
+---
+# lab12 :
+
+### Name of feature: display books 
+
++ Estimate of time needed to complete: day
+
++ Start time: 2:11 pm
+
++ Finish time: 3:00 am
+
++ Actual time needed to complete: 2 days
