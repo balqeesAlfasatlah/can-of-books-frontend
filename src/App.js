@@ -10,8 +10,8 @@ import {
 } from "react-router-dom";
 import Login from './Login';
 
-import BestBook from './BestBooks';
-import BestBooks from './BestBooks';
+import MyFavoriteBooks from './MyFavoriteBooks';
+
 import {  withAuth0 } from "@auth0/auth0-react";
 import Profile from './Profile';
 import "./"
@@ -21,7 +21,7 @@ import "./"
 class App extends React.Component {
 
   render() {
-    console.log('app', this.props);
+    // console.log('app', this.props);
     return(
       <>
         <Router>
@@ -31,9 +31,9 @@ class App extends React.Component {
               <Route exact path="/">
                 {/* TODO: if the user is logged in, render the `BestBooks` component, if they are not, render the `Login` component */}
 
-                {this.props.auth0.isAuthenticated ? <BestBook/> : <Login/>}
+                {this.props.auth0.isAuthenticated ? <MyFavoriteBooks/> : <Login/>}
 
-                {this.props.auth0.isAuthenticated ?  <BestBooks/> : <Login/>}
+              
               </Route>
               <Route exact path="/Profile">
             <Profile/>

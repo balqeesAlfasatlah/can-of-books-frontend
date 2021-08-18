@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import './BestBooks.css';
 import { withAuth0 } from "@auth0/auth0-react";
 import axios from 'axios';
 
@@ -15,13 +14,17 @@ class MyFavoriteBooks extends React.Component {
   }
 
    componentDidMount= async ()=>{
-    let response = await axios.get(
-      `http://localhost:3005/books?email=${this.props.auth0.user.email}`
-    );
-    console.log(response.data);
-    this.setState({
-      userData : response.data
-    });
+     axios.get(
+      `http://localhost:8080/books?email=${this.props.auth0.user.email}`
+    )
+    .then(response => 
+      this.setState({
+      userData : response.data.books
+    })
+   
+    )
+    
+    
     
   }
   render() {
@@ -31,7 +34,8 @@ class MyFavoriteBooks extends React.Component {
         <p>
           This is a collection of my favorite books
         </p>
-        <h2>{this.state.userData.map((item)=>{
+        
+        <h2> { this.props.auth0.isAuthenticated && this.state.userData.map((item)=>{
           return(
             <>
             <img src ={item.img} alt ={item.name}/>
@@ -41,6 +45,7 @@ class MyFavoriteBooks extends React.Component {
             </>
           )
         })}</h2>
+        {/* {console.log(this.state.userData)} */}
       </Jumbotron>
     )
   }
