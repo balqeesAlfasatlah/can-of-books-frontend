@@ -93,6 +93,26 @@ class MyFavoriteBooks extends React.Component {
     }
   }
 
+//   componentDidMount= ()=>{
+//     if (this.props.auth0.isAuthenticated){
+//         this.props.auth0.getIdTokenClaims().then(result=>{
+//             let jwt=result.__raw;
+//             let config={
+//                 headers: {"Authorization" : `Bearer ${jwt}`},
+//                 method: 'get',
+//                 baseURL: "http://localhost:8000",
+//                 url: '/get-users'                    
+//             }
+//             axios(config).then(response=>{
+//                 console.log(response.data);
+//                 this.setState({
+//                     usersList:response.data
+//                 })
+                
+//             })
+//         })
+//     }
+// }
 
   render() {
     return(
